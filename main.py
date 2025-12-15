@@ -4,12 +4,12 @@ import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 
-data = pd.read_csv(student_scores.csv)
+data = pd.read_csv('student_scores.csv')
 
 Hours = data['Hours'].values
 Scores = data['Scores'].values
 
-x_train, x_test, y_train, y_test = train_test_split(Hours, Scores, test_size=0.2, random_state=42)
+x_train, x_test, y_train, y_test = train_test_split(Hours, Scores, test_size=0.4, random_state=42)
 
 x_train = x_train.reshape(-1, 1)
 x_test = x_test.reshape(-1, 1)
